@@ -1,0 +1,72 @@
+@import "../../common-styles";
+
+.main-page {}
+
+.main-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+
+  &-avatar {
+    width: 100px;
+    border-radius: 50%;
+    height: 100px;
+    margin-bottom: 48px;
+  }
+
+  &-heading { margin-bottom: 8px }
+  &-secondary-text { font-size: 20px !important }
+}
+
+.profile-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-icon {
+    display: block;
+    font-size: 54px !important;
+    color: $accent-color;
+    margin-left: -6px;
+    margin-bottom: 16px;
+  }
+
+  &-heading { max-width: 80%; font-size: 24px !important }
+  &-text { display: block; margin-bottom: 8px }
+}
+
+
+.telegram-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.telegram-link img {
+  width: 100px !important;
+  color: red !important;
+}
+
+
+.contact-me-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-text {
+    display: block;
+    font-size: 22px !important;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  &-heading {
+    font-size: 36px !important;
+    font-weight: 800 !important;
+    color: $accent-color !important;
+  }
+}

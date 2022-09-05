@@ -1,0 +1,57 @@
+@import "../../common-styles";
+
+.header {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 64px;
+
+  &-logo {
+    width: 35px !important;
+  }
+
+  &-links {
+    margin: 0 -4px;
+    text-align: center;
+  }
+
+  &-link {
+    margin: 0 4px;
+    padding: 6px 24px;
+    border-radius: 25px !important;
+    color: #858585 !important;
+    background-color: transparent;
+    font-weight: 600 !important;
+  }
+
+  &-link:hover {
+    background: none !important;
+    color: #1f1f1f !important;
+  }
+
+  &-button {
+    padding: 8px 24px !important;
+    border-radius: 16px !important;
+    background-color: #333333 !important;
+    color: #fafafa !important;
+    font-size: 14px !important;
+
+    &-container { text-align: end; }
+  }
+
+  &-button:hover {
+    background-color: $accent-color !important;
+  }
+}
+
+.active {
+  background-color: $accent-color !important;
+  color: #fafafa !important;
+}
+
+.active:hover {
+  background-color: $accent-color !important;
+  color: #fafafa !important;
+  cursor: default;
+}
