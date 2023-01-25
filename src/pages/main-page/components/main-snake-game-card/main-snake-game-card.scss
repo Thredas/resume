@@ -1,0 +1,28 @@
+.main-snake-game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &-icon {
+    width: 96px;
+
+    &-container {
+      display: flex;
+      align-items: flex-start;
+      flex: 1;
+      width: 100%;
+    }
+  }
+  @media (max-width: 600px) {
+    &-icon {
+      width: 64px;
+
+      &-container {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &-subtitle { margin-bottom: 8px }
+  @media (max-width: 600px) { &-subtitle { margin-bottom: 4px } }
+}

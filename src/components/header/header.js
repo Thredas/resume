@@ -1,12 +1,14 @@
 import React from 'react';
+
+import { Link, useLocation } from 'react-router-dom';
+import { routes } from 'components/app-routes/routes';
+import { Button } from 'components/button';
+import { HeadingText } from 'components/text';
+
 import './header.scss';
 
-// import logo from '../../assets/images/logo.png';
-import { Link, useLocation } from 'react-router-dom';
-import Button from '../button/button';
-import { routes } from '../app-routes/routes';
 
-const Header = React.memo(() => {
+export const Header = React.memo(() => {
   const location = useLocation()
 
   const renderHeaderLinks = () => {
@@ -25,11 +27,11 @@ const Header = React.memo(() => {
 
   return (
     <div className="header">
-      {/*<div className="header-logo-container">*/}
-      {/*  <Link to="/">*/}
-      {/*    <img className="header-logo" src={logo} alt="logo" />*/}
-      {/*  </Link>*/}
-      {/*</div>*/}
+      <div className="header-logo-container">
+        <Link className="header-logo-text" to="/">
+          <HeadingText className="header-logo-text">Портфолио</HeadingText>
+        </Link>
+      </div>
 
       <div className="header-links">
         {renderHeaderLinks()}
@@ -45,5 +47,3 @@ const Header = React.memo(() => {
     </div>
   );
 });
-
-export default Header;

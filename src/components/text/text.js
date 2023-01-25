@@ -1,7 +1,9 @@
 import React from 'react';
+
 import './text.scss';
 
-const RegularText = React.memo(({ className, children }) => {
+
+export const RegularText = React.memo(({ className, children }) => {
   return (
     <span className={'text regular ' + className}>
       {children}
@@ -9,7 +11,7 @@ const RegularText = React.memo(({ className, children }) => {
   );
 });
 
-const SecondaryText = React.memo(({ className, children }) => {
+export const SecondaryText = React.memo(({ className, children }) => {
   return (
     <span className={'text secondary ' + className}>
       {children}
@@ -17,12 +19,18 @@ const SecondaryText = React.memo(({ className, children }) => {
   );
 });
 
-const HeadingText = React.memo(({ className, children }) => {
+export const BoldText = React.memo(({ className, children }) => {
+  return (
+    <span className={'text bold ' + className}>
+      {children}
+    </span>
+  );
+});
+
+export const HeadingText = React.memo(({ className, children }) => {
   return (
     <div className={'text heading ' + className}>
       {children}
     </div>
   );
 });
-
-export { RegularText, SecondaryText, HeadingText };

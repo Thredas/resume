@@ -1,17 +1,21 @@
 import React from 'react';
-import '@material-design-icons/font'
 
-import AppRoutes from './components/app-routes/app-routes';
 import { BrowserRouter } from 'react-router-dom';
-import Header from './components/header/header';
-import Footer from './components/footer/footer';
-import Container from './components/container/container';
+import { AppRoutes } from 'components/app-routes';
+import { Header } from 'components/header';
+import { MobileHeader } from 'components/mobile-header';
+import { Footer } from 'components/footer';
+import { Container } from 'components/container';
 
-const App = () => {
+import '@material-design-icons/font';
+
+
+export const App = () => {
   return (
     <BrowserRouter>
       <Container>
         <Header />
+        <MobileHeader />
 
         <AppRoutes />
 
@@ -20,5 +24,3 @@ const App = () => {
     </BrowserRouter>
   );
 }
-
-export default App;

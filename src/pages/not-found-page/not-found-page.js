@@ -1,12 +1,12 @@
 import React from 'react';
+
 import './not-found-page.scss';
 
-const NotFoundPage = () => {
+
+export const NotFoundPage = () => {
   return (
-    <div>
+    <div className="not-found-page">
       404
     </div>
   );
 };
-
-export default NotFoundPage;

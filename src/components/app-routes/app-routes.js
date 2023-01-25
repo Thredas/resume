@@ -1,11 +1,11 @@
 import React from 'react';
+
 import { Route, Routes } from 'react-router-dom';
+import { routes } from 'components/app-routes';
+import { NotFoundPage } from 'pages/not-found-page';
 
-import NotFoundPage from '../../pages/not-found-page/not-found-page';
-import { routes } from './routes';
 
-
-const AppRoutes = () => {
+export const AppRoutes = () => {
   return (
     <Routes>
       {Object.values(routes).map((route) => {
@@ -23,5 +23,3 @@ const AppRoutes = () => {
     </Routes>
   );
 };
-
-export default AppRoutes;

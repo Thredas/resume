@@ -1,9 +1,10 @@
 import React from 'react';
+import { SecondaryText, BoldText } from 'components/text';
+
 import './footer.scss';
-import { SecondaryText } from '../text/text';
 
 
-const Footer = React.memo(() => {
+export const Footer = React.memo(() => {
   return (
     <div className="footer">
       <div className="footer-links">
@@ -12,16 +13,13 @@ const Footer = React.memo(() => {
 
       <div className="footer-signature">
         <SecondaryText className="footer-signature-text">
-          Разработано Пантелеевым Кириллом
+          Разработал Пантелеев Кирилл
         </SecondaryText>
 
-        <SecondaryText className="footer-signature-text">
+        <BoldText className="footer-signature-text">
           © {new Date().getFullYear()}
-        </SecondaryText>
+        </BoldText>
       </div>
     </div>
   );
 });
-
-
-export default Footer;

@@ -1,0 +1,32 @@
+@import "../../../../common-styles";
+
+.contact-me-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-text {
+    display: block;
+    font-size: 22px !important;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  &-heading {
+    font-size: 36px !important;
+    font-weight: 800 !important;
+    color: $accent-color !important;
+  }
+
+  @media (max-width: 650px) {
+    &-text {
+      font-size: 18px !important;
+      margin-bottom: 12px;
+    }
+
+    &-heading {
+      font-size: 28px !important;
+    }
+  }
+}

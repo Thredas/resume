@@ -6,38 +6,58 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 64px;
+  height: 35px;
 
   &-logo {
-    width: 35px !important;
+    &-container { flex: 1 };
+
+    &-text {
+      display: block;
+      font-size: 1.5rem;
+      width: fit-content;
+    }
   }
 
   &-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 3;
     margin: 0 -4px;
     text-align: center;
   }
 
   &-link {
     margin: 0 4px;
-    padding: 6px 24px;
+    padding: 6px 20px;
     border-radius: 25px !important;
     color: #858585 !important;
     background-color: transparent;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
+    transition: 0.2s ease;
   }
 
   &-link:hover {
     background: none !important;
-    color: #1f1f1f !important;
+    color: $accent-color !important
   }
 
   &-button {
+    height: 35px;
+    width: 180px;
     padding: 8px 24px !important;
     border-radius: 16px !important;
     background-color: #333333 !important;
     color: #fafafa !important;
     font-size: 14px !important;
+    text-wrap: none;
 
-    &-container { text-align: end; }
+    &-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1;
+    }
   }
 
   &-button:hover {
@@ -45,13 +65,11 @@
   }
 }
 
-.active {
-  background-color: $accent-color !important;
-  color: #fafafa !important;
-}
+.active { color: $accent-color !important }
+.active:hover { color: $accent-color !important }
 
-.active:hover {
-  background-color: $accent-color !important;
-  color: #fafafa !important;
-  cursor: default;
+@media (max-width: 865px) {
+  .header {
+    display: none;
+  }
 }

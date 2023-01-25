@@ -14,21 +14,21 @@
 .card {
   animation: slideIn;
   animation-timing-function: ease-in-out;
-  animation-duration: 180ms;
+  animation-duration: 200ms;
   animation-fill-mode: backwards;
 }
 
 @keyframes slideIn {
-  from {
+  0% {
     opacity: 0;
-    transform: translateY(30%);
+    transform: translateY(50%);
   }
 
-  65% {
-    transform: translateY(-10px);
+  55% {
+    transform: translateY(-8px);
   }
 
-  to {
+  100% {
     transform: translateY(0px);
     opacity: 1;
   }

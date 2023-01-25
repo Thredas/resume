@@ -1,0 +1,42 @@
+@import "../../../../common-styles";
+
+.main-work-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &-items {
+    display: flex;
+    align-items: flex-end;
+    height: 150px;
+    gap: 80px;
+    padding-right: 32px;
+  }
+  @media (max-width: 600px) {
+    &-items {
+      flex: 0.97;
+      gap: 16px;
+      padding-right: 8px;
+      justify-content: space-between;
+    }
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-icon {
+      display: block;
+      width: 80px !important;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 600px) { &-icon { width: 64px !important } }
+
+    &-title { color: #656565 }
+    @media (max-width: 600px) {
+      &-title { font-size: 14px !important }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.main-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+
+  &-avatar {
+    width: 96px;
+    border-radius: 50%;
+    height: 96px;
+    margin-bottom: 16px;
+  }
+
+  &-heading {
+    margin-bottom: 16px;
+
+    &-mobile-break { display: none }
+  }
+
+  &-secondary-text { font-size: 20px !important }
+
+  @media (max-width: 650px) {
+    &-avatar {
+      width: 64px; height: 64px;
+      margin-bottom: 8px;
+    }
+
+    &-heading {
+      font-size: 1.29rem;
+      margin-bottom: 8px;
+      max-width: 85%;
+
+      &-mobile-break { display: block }
+    }
+
+    &-secondary-text { font-size: 16px !important }
+  }
+}

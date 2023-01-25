@@ -1,0 +1,129 @@
+@import "../../../../common-styles";
+
+.mobile-header-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background-color: #f8f8f8;
+  border-radius: 0 0 32px 32px;
+  z-index: 3;
+  overflow: hidden;
+  animation-timing-function: ease-in-out !important;
+  animation-duration: 130ms !important;
+  animation-fill-mode: forwards !important;
+  box-shadow: rgb(0 0 0 / 15%) 0 4px 64px 0;
+  margin: 0;
+
+  &-container {
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    display: flex;
+    background-color: rgba(31, 31, 31, 0.3);
+    z-index: 2;
+    animation-timing-function: ease !important;
+    animation-duration: 130ms !important;
+    animation-fill-mode: forwards !important;
+  }
+
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 48px;
+    padding: 20px 18px 0;
+  }
+  @media (min-width: 651px) {
+    padding: 12px 18px 0;
+  }
+
+  &-links {
+    margin-bottom: 16px;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  &-link {
+    display: block;
+    color: #858585 !important;
+    padding: 18px 0;
+    text-align: center;
+    border: 10px #656565;
+    border-radius: 16px;
+    margin: 0 16px;
+    flex: 1;
+
+    &-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &-button {
+    background-color: #1f1f1f;
+    border-radius: 16px;
+    color: #f8f8f8;
+    padding: 16px;
+    flex: 1;
+    margin: 0 16px 18px 16px;
+
+    &-container {
+      width: 100%;
+      display: flex;
+    }
+  }
+}
+
+.active { color: $accent-color !important }
+.active:hover { color: $accent-color !important }
+
+@media (min-width: 865px) {
+  .mobile-header-menu {
+    display: none;
+  }
+}
+
+@keyframes popIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes popOut {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
+
+@keyframes slideFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+
+  55% {
+    transform: translateY(2%) scaleY(1.03);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%) scaleY(1);
+  }
+}
+
+@keyframes slideToTop {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  70% {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+}

@@ -1,0 +1,27 @@
+.mobile-header {
+  margin: 12px 4px 32px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+
+  &-logo {
+    &-container { flex: 1 }
+
+    &-text {
+      display: block;
+      font-size: 1.5rem !important;
+      width: fit-content;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .mobile-header { margin-top: 32px; }
+}
+
+@media (min-width: 865px) {
+  .mobile-header {
+    display: none;
+  }
+}

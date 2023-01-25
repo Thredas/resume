@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import './card.scss';
 import { Link } from 'react-router-dom';
 
-const Card = React.memo((
+import './card.scss';
+
+
+export const Card = React.memo((
   { children, className, style, linkTo, size = 'm', externalLink }
 ) => {
   const [isHover, setIsHover] = useState(false);
@@ -32,5 +34,3 @@ const Card = React.memo((
     </div>
   );
 });
-
-export default Card;

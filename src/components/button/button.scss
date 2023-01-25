@@ -8,4 +8,15 @@
   border: 0;
   transition: 0.15s ease;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: #656565;
 }

@@ -6,19 +6,31 @@
   letter-spacing: -1px;
   word-spacing: 2px;
   color: #1f1f1f;
-  line-height: 28px;
 }
 
 .heading {
   font-weight: 800;
   font-size: 30px;
+  line-height: 28px;
 }
 
 .regular {
   font-size: 16px;
+  line-height: 18px;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .secondary {
   color: #656565;
   font-size: 16px;
+  line-height: 18px;
+}
+
+@media (max-width: 600px) {
+  .heading { font-size: 23px }
+  .regular { font-size: 16px }
+  .secondary { font-size: 16px }
 }

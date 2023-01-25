@@ -1,14 +1,18 @@
 import React from 'react';
 import './button.scss'
 
-const Button = React.memo(({ children, className }) => {
+export const Button = React.memo(({
+  children,
+  className,
+  onClick,
+  type = 'primary',
+}) => {
   return (
     <button
-      className={'button ' + className}
+      className={`button ${type} ` + className}
+      onClick={onClick}
     >
       {children}
     </button>
   );
 });
-
-export default Button;
