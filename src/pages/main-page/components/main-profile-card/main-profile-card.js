@@ -17,9 +17,9 @@ export const MainProfileCard = () => {
 
         <div>
           <SecondaryText className="profile-card-text">
-            Узнайте&nbsp;
+            Узнайте больше&nbsp;
             <br className="main-info-heading-mobile-break" />
-            о моём опыте
+            о моих навыках
           </SecondaryText>
 
           <HeadingText className="profile-card-heading">

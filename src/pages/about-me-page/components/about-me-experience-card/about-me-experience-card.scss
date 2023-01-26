@@ -1,0 +1,13 @@
+.about-me-experience-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &-title { margin-bottom: 24px }
+  &-text { font-size: 1.3rem; line-height: 1.3rem }
+
+  @media (max-width: 600px) {
+    &-title { margin-bottom: 16px }
+    &-text { font-size: 1.1rem; line-height: 1.25rem }
+  }
+}

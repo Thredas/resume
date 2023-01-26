@@ -1,4 +1,9 @@
 import { MainPage } from 'pages/main-page';
+import { AboutMePage } from 'pages/about-me-page';
+import { ResumePage } from 'pages/resume-page';
+import { ProjectsPage } from 'pages/projects-page';
+import { ContactMePage } from 'pages/contact-me-page';
+import { SnakeGamePage } from 'pages/snake-game-page';
 
 export const routes = {
   MAIN_PAGE: {
@@ -10,25 +15,31 @@ export const routes = {
   ABOUT_ME_PAGE: {
     path: '/about-me',
     name: 'Обо мне',
-    component: <></>,
+    component: <AboutMePage />,
     inHeader: true,
   },
   RESUME_PAGE: {
     path: '/resume',
     name: 'Резюме',
-    component: <></>,
+    component: <ResumePage />,
     inHeader: true,
   },
   PROJECTS_PAGE: {
     path: '/projects',
     name: 'Работы',
-    component: <></>,
+    component: <ProjectsPage />,
     inHeader: true,
   },
   CONTACT_ME_PAGE: {
     path: '/contact-me',
     name: 'Связаться со мной',
-    component: <></>,
+    component: <ContactMePage />,
+    inHeader: false,
+  },
+  SNAKE_GAME_PAGE: {
+    path: '/snake-game',
+    name: 'Игра "Змейка"',
+    component: <SnakeGamePage />,
     inHeader: false,
   },
 };

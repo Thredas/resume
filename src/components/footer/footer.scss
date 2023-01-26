@@ -6,12 +6,24 @@
   margin-bottom: 32px;
   width: 100%;
 
+  &-links { display: flex; margin-bottom: 32px }
+  @media (max-width: 600px) { &-links { display: none } }
+
   &-signature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px;
+
     &-text {
-      color: #656565;
+      color: #4d4d4d;
       text-align: center;
       display: block;
-      line-height: 24px;
+      line-height: 1.8rem;
     }
   }
+  @media (max-width: 600px) { &-signature { gap: 8px } }
 }
+
+.gridfolio-link { text-decoration: underline; color: #656565 }

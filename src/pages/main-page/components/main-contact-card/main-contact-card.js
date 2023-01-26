@@ -9,7 +9,7 @@ import './main-contact-card.scss';
 
 export const MainContactCard = () => {
   return (
-    <Card size="xl" linkTo={routes.CONTACT_ME_PAGE.path}>
+    <Card size="l" linkTo={routes.CONTACT_ME_PAGE.path}>
       <div className="contact-me-card">
         <div />
 

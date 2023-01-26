@@ -1,0 +1,30 @@
+.about-me-hello-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &-heading {
+    margin-bottom: 24px;
+  }
+
+  &-text {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 650px) {
+    &-heading {
+      line-height: 1.4rem;
+      margin-bottom: 20px;
+
+      &-mobile-break { display: block }
+    }
+
+    &-text {
+      line-height: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .about-me-hello-card { justify-content: center }
+}

@@ -6,12 +6,12 @@
 }
 
 @for $i from 1 through 8 {
-  .card-wrapper:nth-child(#{$i}n) .card {
+  .card-wrapper:nth-child(#{$i}n) .animation-slideIn {
     animation-delay: #{($i + 1) * 0.05}s;
   }
 }
 
-.card {
+.animation-slideIn {
   animation: slideIn;
   animation-timing-function: ease-in-out;
   animation-duration: 200ms;

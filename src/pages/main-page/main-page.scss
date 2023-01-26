@@ -1,21 +1,3 @@
-@import "../../common-styles";
-
 .main-page {
   flex: 1;
-}
-
-.telegram-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.telegram-link img {
-  width: 100px !important;
-  color: red !important;
-
-  @media (max-width: 650px) {
-    width: 80px !important;
-  }
 }

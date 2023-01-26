@@ -10,6 +10,7 @@
   box-shadow: rgb(0 0 0 / 4%) 0 4px 64px 0;
   padding: 32px;
   margin: 8px;
+  cursor: default;
 
   &-m { flex-basis: 25% }
   &-l { flex-basis: 50% }
@@ -18,7 +19,6 @@
   &-wrapper {
     display: flex;
     height: 300px;
-    flex-grow: 1;
   }
 
   &-link-icon span {
@@ -30,7 +30,8 @@
   }
 }
 
-.card:hover {
+.card-hover { cursor: pointer }
+.card-hover:hover {
   transform: scale(1.01);
   box-shadow: rgba(124, 124, 124, 0.3) 0 4px 64px 0;
 }
@@ -40,7 +41,7 @@
   .card {
     &-m { flex-basis: 33.3% }
     &-l { flex-basis: 66.6% }
-    &-xl { flex-basis: 75% }
+    &-xl { flex-basis: 66.6% }
   }
 }
 

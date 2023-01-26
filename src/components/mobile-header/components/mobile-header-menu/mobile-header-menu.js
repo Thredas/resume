@@ -73,6 +73,7 @@ export const MobileHeaderMenu = ({ isMenuOpen, setIsMenuOpen }) => {
           <Link
             className="mobile-header-menu-button-container"
             to={routes.CONTACT_ME_PAGE.path}
+            onClick={() => setIsMenuOpen(false)}
           >
             <Button className="mobile-header-menu-button">
               Связаться со мной
