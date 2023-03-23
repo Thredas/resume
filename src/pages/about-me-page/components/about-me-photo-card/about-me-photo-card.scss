@@ -2,7 +2,7 @@
   background-repeat: no-repeat;
   background-position-y: 45%;
   background-position-x: 70%;
-  background-size: contain;
+  background-size: cover;
   background-color: #000;
 
   &-image {
@@ -11,16 +11,5 @@
   }
 }
 
-@media (max-width: 900px) {
-  .about-me-photo-card-wrapper {
-    height: 500px;
-    flex: 1;
-  }
-}
-
-@media (max-width: 600px) {
-  .about-me-photo-card-wrapper {
-    height: 300px;
-    flex: 1;
-  }
-}
+@media (max-width: 900px) { .about-me-photo-card-wrapper { flex-basis: 33.3%; flex-grow: 0 } }
+@media (max-width: 600px) { .about-me-photo-card-wrapper { flex-basis: 50% } }

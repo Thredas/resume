@@ -1,3 +1,21 @@
 .resume-page {
   flex: 1;
+  display: flex;
+  gap: 64px;
+
+  &-left-part { width: 370px }
+  &-right-part { flex: 1; margin: 8px }
+
+  @media (max-width: 1200px) {
+    gap: 48px;
+    &-left-part { width: 340px }
+  }
+
+  @media (max-width: 900px) {
+    display: block;
+
+    &-left-part {
+      width: 100%;
+    }
+  }
 }

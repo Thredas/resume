@@ -1,0 +1,53 @@
+@import "../../../../common-styles";
+
+.resume-profile-card {
+  display: flex;
+  flex-direction: column;
+
+  &-wrapper {
+    flex-basis: 100%;
+    height: fit-content;
+  }
+
+  &-avatar {
+    width: 96px;
+    border-radius: 50%;
+    height: 96px;
+    margin-bottom: 16px;
+  }
+
+  &-text {
+    display: block !important;
+
+    &.name { font-size: 1.5rem; margin-bottom: 8px; }
+    &.position { font-size: 1.1rem; color: $accent-color; margin-bottom: 32px }
+
+    &.contact {
+      transition: 0.2s ease;
+      font-size: 1.1rem;
+
+      &-container { margin-bottom: 16px; width: fit-content }
+      &:hover { color: #424242 }
+    }
+  }
+
+  &-button {
+    width: 100%;
+    border: 2px #8d8d8d solid !important;
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: #1f1f1f;
+
+    &:hover {
+      border: 2px $accent-color solid !important;
+      color: $accent-color;
+    }
+
+    &-container {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      margin-top: 16px;
+    }
+  }
+}

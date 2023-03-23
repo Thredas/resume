@@ -10,13 +10,12 @@
 
 .heading {
   font-weight: 800;
-  font-size: 30px;
-  line-height: 28px;
+  font-size: 1.8rem;
+  line-height: 1.7rem;
 }
 
 .regular {
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 1rem;
 }
 
 .bold {
@@ -25,8 +24,8 @@
 
 .secondary {
   color: #656565;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 1rem;
+  line-height: 1.1rem;
 }
 
 @media (max-width: 600px) {

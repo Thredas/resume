@@ -5,26 +5,26 @@
 
   &-heading {
     margin-bottom: 24px;
+    line-height: 2.2rem;
   }
 
   &-text {
     font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 
   @media (max-width: 650px) {
     &-heading {
       line-height: 1.4rem;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
+      font-size: 1.35rem;
 
       &-mobile-break { display: block }
     }
 
     &-text {
       line-height: 1.2rem;
+      font-size: 1rem;
     }
   }
-}
-
-@media (max-width: 650px) {
-  .about-me-hello-card { justify-content: center }
 }

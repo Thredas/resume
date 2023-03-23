@@ -3,7 +3,6 @@ import React from 'react';
 import { CardsWrapper } from 'components/cards-wrapper';
 import { HeadingText } from 'components/text';
 import { MainSnakeGameCard } from 'pages/main-page/components/main-snake-game-card';
-import { MainGwentGameCard } from 'pages/main-page/components/main-gwent-game-card';
 
 import './projects-page.scss';
 
@@ -17,7 +16,6 @@ export const ProjectsPage = () => {
         </HeadingText>
 
         <MainSnakeGameCard />
-        <MainGwentGameCard />
       </CardsWrapper>
     </div>
   );

@@ -8,8 +8,12 @@ import { AboutMePhotoCard } from './components/about-me-photo-card';
 import { AboutMeHelloCard } from './components/about-me-hello-card';
 import { AboutMeInfoCard } from './components/about-me-info-card';
 import { AboutMeExperienceCard } from './components/about-me-experience-card';
-import { MainTelegramLinkCard }
-  from 'pages/main-page/components/main-telegram-link-card';
+import { ExternalLinkCard }
+  from 'components/external-link-card';
+
+import telegram from 'assets/images/telegram.svg';
+import github from 'assets/images/github.svg';
+import linkedin from 'assets/images/linkedin.svg';
 
 import './about-me-page.scss';
 
@@ -26,8 +30,16 @@ export const AboutMePage = () => {
         <AboutMeHelloCard />
         <AboutMeInfoCard />
         <AboutMeExperienceCard />
-        <MainTelegramLinkCard />
+
         <MainProfileCard />
+
+        <ExternalLinkCard linkTo="https://t.me/Thredas" imgSrc={telegram} />
+        <ExternalLinkCard linkTo="https://github.com/Thredas" imgSrc={github} />
+        <ExternalLinkCard
+          linkTo="https://www.linkedin.com/in/kirill-pantelyev-473712250/"
+          imgSrc={linkedin}
+        />
+
         <MainContactCard />
       </CardsWrapper>
     </div>

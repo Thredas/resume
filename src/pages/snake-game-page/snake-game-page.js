@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 
-import { RegularText, SecondaryText } from 'components/text';
+import { BoldText, RegularText, SecondaryText } from 'components/text';
 
 import './snake-game-page.scss';
 
@@ -90,8 +90,8 @@ export const SnakeGamePage = () => {
     else if (direction === 270) y -= (speed / FPS);
 
     // boundaries collision
-    if (y >= fieldRef.current.clientHeight - 15) y = 0;
-    else if (y <= 0) y = fieldRef.current.clientHeight - 25;
+    if (y >= fieldRef.current.clientHeight - 20) y = 0;
+    else if (y <= 0) y = fieldRef.current.clientHeight - 17;
     else if (x <= 0) x = fieldRef.current.clientWidth - 25;
     else if (x >= fieldRef.current.clientWidth - 15) x = 0;
 
@@ -122,27 +122,29 @@ export const SnakeGamePage = () => {
   }, FRAME_TIME);
 
   return (
-    <div className="snake-game-page">
+    <div className={!isMobile ? 'snake-game-page' : 'snake-game-page-mobile'}>
       <div className={isMobile ? 'snake-field-mobile' : 'snake-field'} ref={fieldRef}>
         <div
           className="player"
           style={{
             transform:
               `translate(${playerPosition.x}px, 
-            ${playerPosition.y}px) 
-            rotate(${direction}deg)`
+              ${playerPosition.y}px) 
+              rotate(${direction}deg)`
           }}
         >
           <div className="head" />
         </div>
 
-        {useMemo(() => tail.map((tailPart, idx) =>
-          <div
-            key={idx}
-            className="tail-part"
-            style={{ transform: `translate(${tailPart.x + 3}px , ${tailPart.y + 3}px)` }}
-          />
-        ), [tail])}
+        <div className="tail">
+          {useMemo(() => tail.map((tailPart, idx) =>
+            <div
+              key={idx}
+              className="tail-part"
+              style={{ transform: `translate(${tailPart.x + 3}px , ${tailPart.y + 3}px)` }}
+            />
+          ), [tail])}
+        </div>
 
         <div
           className="apple"
@@ -173,14 +175,14 @@ export const SnakeGamePage = () => {
               </div>
             )}
 
-            <SecondaryText className="start-game-text">
+            <BoldText className="start-game-text">
               Нажните на любую из кнопок стрелочек, чтобы начать игру
-            </SecondaryText>
+            </BoldText>
 
             {isMobile && <div />}
           </div>
         )}
-
+        
         {!direction && (
           <button className="mobile-switch" onClick={() => setIsMobile(!isMobile)}>
             <span className="material-icons-round">
@@ -192,50 +194,50 @@ export const SnakeGamePage = () => {
             )}
           </button>
         )}
+      </div>
 
-        {isMobile && (
-          <div className="mobile-buttons">
+      {isMobile && (
+        <div className="mobile-buttons">
+          <button
+            className="mobile-button button-top"
+            onClick={() => setDirection((direction) => direction !== 90 ? 270 : direction)}
+          >
+            <span className="material-icons-round">arrow_upward</span>
+          </button>
+
+          <div className="mobile-buttons-row">
             <button
-              className="mobile-button button-top"
-              onClick={() => setDirection((direction) => direction !== 90 ? 270 : direction)}
+              className="mobile-button button-left"
+              onClick={() => setDirection((direction) => direction !== 1 ? 180 : direction)}
             >
-              <span className="material-icons-round">arrow_upward</span>
+              <span className="material-icons-round">arrow_back</span>
             </button>
 
-            <div className="mobile-buttons-row">
-              <button
-                className="mobile-button button-left"
-                onClick={() => setDirection((direction) => direction !== 1 ? 180 : direction)}
-              >
-                <span className="material-icons-round">arrow_back</span>
-              </button>
-
-              <button
-                className="mobile-button "
-                onClick={() => setDirection(direction ? null : 1)}
-              >
-                {direction
-                  ? (<span className="material-icons-round">pause</span>)
-                  : (<span className="material-icons-round">play_arrow</span>)}
-              </button>
-
-              <button
-                className="mobile-button button-right"
-                onClick={() => setDirection((direction) => direction !== 180 ? 1 : direction)}
-              >
-                <span className="material-icons-round">arrow_forward</span>
-              </button>
-            </div>
+            <button
+              className="mobile-button "
+              onClick={() => setDirection(direction ? null : 1)}
+            >
+              {direction
+                ? (<span className="material-icons-round">pause</span>)
+                : (<span className="material-icons-round">play_arrow</span>)}
+            </button>
 
             <button
-              className="mobile-button button-bottom"
-              onClick={() => setDirection((direction) => direction !== 270 ? 90 : direction)}
+              className="mobile-button button-right"
+              onClick={() => setDirection((direction) => direction !== 180 ? 1 : direction)}
             >
-              <span className="material-icons-round">arrow_downward</span>
+              <span className="material-icons-round">arrow_forward</span>
             </button>
           </div>
-        )}
-      </div>
+
+          <button
+            className="mobile-button button-bottom"
+            onClick={() => setDirection((direction) => direction !== 270 ? 90 : direction)}
+          >
+            <span className="material-icons-round">arrow_downward</span>
+          </button>
+        </div>
+      )}
     </div>
   );
 };

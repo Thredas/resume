@@ -1,0 +1,23 @@
+.resume-skills-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &-wrapper {
+    flex-basis: 100%;
+    height: fit-content;
+  }
+
+  &-title { font-size: 1.3rem }
+
+  &-rows {
+    display: flex;
+  }
+
+  &-list {
+    padding: 0 20px;
+    margin: 16px 0 0;
+
+    & li { font-size: 1rem; font-weight: 500; padding: 4px 0 }
+  }
+}

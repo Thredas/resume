@@ -17,6 +17,11 @@
   &-heading { font-size: 24px !important; max-width: 80% }
   &-text { display: block; margin-bottom: 8px }
 
+  @media (max-width: 850px) {
+    &-heading { font-size: 20px !important; line-height: 24px !important }
+    &-text { margin-bottom: 8px; font-size: 14px !important; max-width: 110px }
+  }
+
   @media (max-width: 650px) {
     justify-content: space-between;
 

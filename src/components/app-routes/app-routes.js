@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { routes } from 'components/app-routes';
 import { NotFoundPage } from 'pages/not-found-page';
 
 
 export const AppRoutes = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <Routes>
       {Object.values(routes).map((route) => {

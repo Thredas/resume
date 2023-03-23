@@ -5,7 +5,11 @@
   transition: all 0.15s ease-in-out;
 }
 
-@for $i from 1 through 8 {
+@for $i from 1 through 64 {
+  .animation-slideIn:nth-child(#{$i}n) {
+    animation-delay: #{($i + 1) * 0.05}s;
+  }
+
   .card-wrapper:nth-child(#{$i}n) .animation-slideIn {
     animation-delay: #{($i + 1) * 0.05}s;
   }
