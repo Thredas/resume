@@ -45,12 +45,12 @@ export const ResumeProfileCard = () => {
 
       <a
         className="resume-profile-card-text contact-container"
-        href="https://www.thredas.com"
+        href="https://thredas.com"
         rel="noopener noreferrer"
         target="_blank"
       >
         <SecondaryText className="resume-profile-card-text contact">
-          www.thredas.com
+          thredas.com
         </SecondaryText>
       </a>
 

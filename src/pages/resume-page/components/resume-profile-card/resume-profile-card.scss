@@ -19,7 +19,7 @@
   &-text {
     display: block !important;
 
-    &.name { font-size: 1.5rem; margin-bottom: 8px; }
+    &.name { font-size: 1.5rem; margin-bottom: 4px; }
     &.position { font-size: 1.1rem; color: $accent-color; margin-bottom: 32px }
 
     &.contact {
@@ -33,14 +33,15 @@
 
   &-button {
     width: 100%;
-    border: 2px #8d8d8d solid !important;
     border-radius: 8px;
-    padding: 8px 16px;
-    color: #1f1f1f;
+    padding: 10px 16px;
+    color: #e7e7e7;
+    background: #1f1f1f !important;
 
     &:hover {
-      border: 2px $accent-color solid !important;
-      color: $accent-color;
+      background: $accent-color !important;
+      transform: translateY(-2px);
+      box-shadow: rgba(52, 125, 199, 0.3) 0 4px 64px 0 !important;
     }
 
     &-container {
