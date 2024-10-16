@@ -24,7 +24,7 @@ export const MainInfoCard = () => {
           </HeadingText>
 
           <SecondaryText className="main-info-secondary-text">
-            Я - Middle Frontend-разработчик
+            Я - Frontend-разработчик
           </SecondaryText>
         </div>
       </div>

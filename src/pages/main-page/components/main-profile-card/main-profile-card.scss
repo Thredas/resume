@@ -15,7 +15,7 @@
   }
 
   &-heading { font-size: 24px !important; max-width: 80% }
-  &-text { display: block; margin-bottom: 8px; max-width: 50% }
+  &-text { display: block; margin-bottom: 8px; max-width: 50%; font-size: 0.95rem; color: #838383 }
 
   @media (max-width: 850px) {
     &-heading { font-size: 20px !important; line-height: 24px !important }
